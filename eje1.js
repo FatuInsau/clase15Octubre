@@ -25,17 +25,18 @@ console.log(invertirCaso2('feliz cumple')) // 'FELIZ CUMPLE'
 console.log(invertirCaso2('jAvAsCrIpT')) // 'JaVaScRiPt'
 
 
-// No anda :(
-// function invertirCaso2(texto) {
-//     return texto.reduce((resultado,letra)=>{
-//         // ver si esta en mayus, pasar a minus
-//         if (letra === letra.toUpperCase()) {
-//             // resultado += texto[i].toLowerCase();
-//             return resultado+letra.toLowerCase()
-//             // si esta en minus, pasar a mayus
-//         } else {
-//             // resultado += texto[i].toUpperCase();
-//             return resultado+letra.toUpperCase();
-//         }
-//     })     
-// }
+
+function invertirCaso2(texto) {
+    let arr = texto.split('')
+    return arr.reduce((resultado,letra)=>{
+        // ver si esta en mayus, pasar a minus
+        if (letra === letra.toUpperCase()) {
+            // resultado += texto[i].toLowerCase();
+            return resultado+letra.toLowerCase()
+            // si esta en minus, pasar a mayus
+        } else {
+            // resultado += texto[i].toUpperCase();
+            return resultado+letra.toUpperCase();
+        }
+    },'')     
+}
